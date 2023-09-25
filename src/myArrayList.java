@@ -12,9 +12,31 @@ public class myArrayList<E> {
      array = new Object[INITIAL_CAPACITY];
      size = 0;
  }
-
- // Add methods to implement the ArrayList functionality.
  
+ public int getSize() 
+ {
+	 return size;
+ }
+ 
+ public Object[] getArray() 
+ {
+	 return array;
+ }
+
+ // IndexOf Method
+ // Written by Colby
+ int indexOf(Fraction input)
+ {
+	 for(int i = 0; i < array.length; i++)
+	 {
+		 if(input.compare((Fraction) array[i]) == 0)
+		 {
+			 return i;
+		 }
+	 }
+	 
+	 return -1;
+ }
  
  
 }
